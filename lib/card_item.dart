@@ -16,9 +16,6 @@ class CardItem extends StatefulWidget {
 class CardItemState extends State<CardItem> with TickerProviderStateMixin {
   AnimationController animationController;
 
-  double _width;
-
-  double _height;
 
   @override
   void initState() {
@@ -26,15 +23,6 @@ class CardItemState extends State<CardItem> with TickerProviderStateMixin {
         AnimationController(vsync: this, duration: Duration(milliseconds: 700))
           ..addStatusListener((status) {});
     super.initState();
-  }
-
-  flip() {
-    animationController.reset();
-    animationController.forward();
-  }
-
-  stop() {
-    animationController.reset();
   }
 
   _buildCard() {
@@ -201,20 +189,8 @@ class CardItemState extends State<CardItem> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return _buildAnimatedCardShake();
+    return _buildCard();
   }
 
-  _buildAnimatedCardShake() {
-    return AnimatedBuilder(
-      animation: animationController,
-      child: _buildCard(),
-      builder: (context, child) {
-        double v = math.sin(animationController.value * math.pi * 10.0) * 10;
-        return Transform.translate(
-          offset: Offset(v, 0),
-          child: child,
-        );
-      },
-    );
-  }
+  
 }

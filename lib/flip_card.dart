@@ -140,9 +140,9 @@ class FlipCardState extends State<FlipCard>
       controller.reverse();
     }
 
-    setState(() {
-      isFront = !isFront;
-    });
+     setState(() {
+       isFront = !isFront;
+     });
   }
 
   @override
