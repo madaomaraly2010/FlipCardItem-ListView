@@ -1,0 +1,4 @@
+#Mon Aug 05 15:32:29 EET 2019
+base.0=D\:\\Flutter\\Projects\\flipcard_listview\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
